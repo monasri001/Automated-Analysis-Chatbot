@@ -4,6 +4,7 @@ import numpy as np
 import requests
 import plotly.express as px
 from groq import Groq
+import os
 
 # Streamlit app header
 st.set_page_config(
@@ -12,9 +13,12 @@ st.set_page_config(
     layout="centered"  # Enhanced UI with wide layout
 )
 
-# Set up Groq API Key
-api = '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'
-client = Groq(api_key=api)
+# Access the API key from environment variables
+api = os.getenv("GROQ_API_KEY")
+if not api:
+    st.error("API key not found. Please set the 'GROQ_API_KEY' environment variable.")
+else:
+    client = Groq(api_key=api)
 
 # Dataset Upload
 st.title("Data Analytics Dashboard")
