@@ -1,8 +1,6 @@
-os
-streamlit
-pandas
-numpy
-requests
-plotly
-groq
-python-dotenv
+streamlit==1.25.0
+pandas==1.5.3
+numpy==1.24.2
+requests==2.31.0
+plotly==5.16.0
+groq==0.13.0  
