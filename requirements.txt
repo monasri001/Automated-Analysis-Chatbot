@@ -1,6 +1,8 @@
+os
 streamlit
 pandas
 numpy
 requests
 plotly
 groq
+python-dotenv
